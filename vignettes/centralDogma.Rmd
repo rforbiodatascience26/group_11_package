@@ -40,11 +40,8 @@ Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-
 
 # Function 4
 
-<<<<<<< HEAD
 Translate a sequence of codons into an amino acid string
 
 Takes a character vector containing consecutive three-letter RNA codons and translates them into their corresponding amino acids. The function maps the provided sequence against the standard genetic code table stored internally within the package. The individual amino acid characters are then collapsed and pasted together without any separators. The result is a single character string representing the fully translated protein sequence, completing the simulated central dogma pipeline.
 
-=======
->>>>>>> 2c70d7c0eb89745c59b867079b0c42e3c011c0bd
 # Function 5

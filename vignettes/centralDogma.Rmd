@@ -17,3 +17,13 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(central.dogma)
 ```
+
+# getCodon Function
+
+Split a DNA sequence into codons
+
+Takes a single DNA sequence and cuts it into consecutive, non-overlapping
+three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3),
+so reading can begin at any of the first three bases. Any leftover bases at
+the end that cannot form a full codon are dropped. The result is a character
+vector with one codon per element, ready for use in translation to amino acids

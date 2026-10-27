@@ -1,8 +1,8 @@
 ---
-title: "central-dogma"
-output: rmarkdown::html_vignette
+title: "centralDogma.pdf"
+output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{central-dogma}
+  %\VignetteIndexEntry{centralDogma}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

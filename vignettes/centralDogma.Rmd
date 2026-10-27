@@ -26,7 +26,11 @@ Tools for working with the central dogma of molecular biology, from DNA to RNA t
 
 This function generates a random synthetic DNA template strand of a user-defined length by sampling nucleotide bases (A, T, G, C) establishing the foundational molecular sequence for downstream genetic simulations.
 
-# Function 2
+# Function 2 - substituteT4U function
+
+Converts a DNA sequence into an RNA sequence
+
+The substituteT4U function takes a DNA sequence represented as a character string and replaces every occurrence of the nucleotide thymine (T) with uracil (U), producing an RNA sequence. This shows the difference between DNA and RNA, because RNA contains uracil instead of thymine. The function preserves the sequence length and the order of all nucleotides, leaving the other characters unchanged. The resulting RNA sequence can then be passed to the getCodon function to split it into codons for translation into amino acids.
 
 # Function 3 - getCodon Function
 
@@ -34,8 +38,6 @@ Split a DNA sequence into codons
 
 Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
 
-
 # Function 4
 
 # Function 5
-

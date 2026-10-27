@@ -32,8 +32,20 @@ This function generates a random synthetic DNA template strand of a user-defined
 
 Split a DNA sequence into codons
 
+<<<<<<< HEAD
 Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
+=======
+<<<<<<< HEAD
+Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
+=======
+Takes a single DNA sequence and cuts it into consecutive, non-overlapping
+three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3),
+so reading can begin at any of the first three bases. Any leftover bases at
+the end that cannot form a full codon are dropped. The result is a character
+vector with one codon per element, ready for use in translation to amino acids
+>>>>>>> bef9c85daadfed9df8051c4e8ca78e6572abebd2
 
 # Function 4
 
 # Function 5
+>>>>>>> f76ec0a680b6d6c258db06e95069b3c4a1475863

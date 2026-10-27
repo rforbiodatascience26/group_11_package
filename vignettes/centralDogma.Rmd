@@ -18,11 +18,13 @@ knitr::opts_chunk$set(
 library(central.dogma)
 ```
 
-# CentralDogma Package
+# central.dogma Package
 
 Tools for working with the central dogma of molecular biology, from DNA to RNA to protein. The package provides functions for splitting a DNA sequence into codons in a chosen reading frame, which is the first step in translating a coding sequence into its amino acid sequence. It also provides a plot of Amino Acid frequency, which makes it easy to view the composition of the sequnence.
 
-# Function 1
+# Function 1- sampling function
+
+This function generates a random synthetic DNA template strand of a user-defined length by sampling nucleotide bases (A, T, G, C) establishing the foundational molecular sequence for downstream genetic simulations.
 
 # Function 2
 
@@ -30,11 +32,7 @@ Tools for working with the central dogma of molecular biology, from DNA to RNA t
 
 Split a DNA sequence into codons
 
-Takes a single DNA sequence and cuts it into consecutive, non-overlapping
-three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3),
-so reading can begin at any of the first three bases. Any leftover bases at
-the end that cannot form a full codon are dropped. The result is a character
-vector with one codon per element, ready for use in translation to amino acids
+Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
 
 # Function 4
 

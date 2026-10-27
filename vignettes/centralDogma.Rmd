@@ -34,8 +34,10 @@ Split a DNA sequence into codons
 
 Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
 
-
 # Function 4
 
-# Function 5
+Translate a sequence of codons into an amino acid string
 
+Takes a character vector containing consecutive three-letter RNA codons and translates them into their corresponding amino acids. The function maps the provided sequence against the standard genetic code table stored internally within the package. The individual amino acid characters are then collapsed and pasted together without any separators. The result is a single character string representing the fully translated protein sequence, completing the simulated central dogma pipeline.
+
+# Function 5

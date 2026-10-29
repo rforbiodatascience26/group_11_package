@@ -47,5 +47,3 @@ Takes a character vector containing consecutive three-letter RNA codons and tran
 # Function 5 - Amino Acid Frequency Plot
 
 Creates a bar plot showing the frequency of amino acids in a protein sequence. Takes a single protein sequence as input, identifies each unique amino acid present, and counts how many times it occurs within the sequence. These counts are organised into a data frame and visualised as a ggplot2 bar chart, where each bar represents the frequency of a particular amino acid. The function returns the completed ggplot object, allowing it to be displayed or further customised by the user.
-
-

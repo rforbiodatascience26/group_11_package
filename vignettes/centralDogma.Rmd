@@ -44,14 +44,12 @@ Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-
 
 # Function 4
 
-<<<<<<< HEAD
+
 # Function 5 - Amino Acid Frequency Plot
 
 Creates a bar plot showing the frequency of amino acids in a protein sequence. Takes a single protein sequence as input, identifies each unique amino acid present, and counts how many times it occurs within the sequence. These counts are organised into a data frame and visualised as a ggplot2 bar chart, where each bar represents the frequency of a particular amino acid. The function returns the completed ggplot object, allowing it to be displayed or further customised by the user.
-=======
+
 Translate a sequence of codons into an amino acid string
 
 Takes a character vector containing consecutive three-letter RNA codons and translates them into their corresponding amino acids. The function maps the provided sequence against the standard genetic code table stored internally within the package. The individual amino acid characters are then collapsed and pasted together without any separators. The result is a single character string representing the fully translated protein sequence, completing the simulated central dogma pipeline.
 
-# Function 5
->>>>>>> 16b064e8965179490bb354498c9d5d3b0e81ef5e

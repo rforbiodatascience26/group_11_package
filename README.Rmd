@@ -1,55 +1,52 @@
 ---
-output: github_document
+title: "central.dogma"
+output: rmarkdown::github_document
+vignette: >
+  %\VignetteIndexEntry{centralDogma}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  dev = "png",
+  dev.args = list(type = "cairo")
 )
 ```
 
-# central.dogma
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
-
-The goal of central.dogma is to ...
-
-## Installation
-
-You can install the development version of central.dogma like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
+```{r setup, include=FALSE}
 library(central.dogma)
-## basic example code
+options(bitmapType = "cairo")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+# central.dogma Package
 
-```{r cars}
-summary(cars)
-```
+Tools for working with the central dogma of molecular biology, from DNA to RNA to protein. The package provides functions for splitting a DNA sequence into codons in a chosen reading frame, which is the first step in translating a coding sequence into its amino acid sequence. It also provides a plot of Amino Acid frequency, which makes it easy to view the composition of the sequnence.
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+# Function 1- sampling function
 
-You can also embed plots, for example:
+This generates a random DNA sequence. Takes a specified length and builds a synthetic DNA template strand by randomly sampling nucleotide bases (`A`, `T`, `G`, `C`) with replacement. The `seq_length` argument determines the total number of bases in the output. The result is a single character string representing a foundational genetic sequence, ready for use as the upstream template in downstream transcription and translation.
 
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
+# Function 2 - substituteT4U function
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+Converts a DNA sequence into an RNA sequence
+
+The substituteT4U function takes a DNA sequence represented as a character string and replaces every occurrence of the nucleotide thymine (T) with uracil (U), producing an RNA sequence. This shows the difference between DNA and RNA, because RNA contains uracil instead of thymine. The function preserves the sequence length and the order of all nucleotides, leaving the other characters unchanged. The resulting RNA sequence can then be passed to the getCodon function to split it into codons for translation into amino acids.
+
+# Function 3 - getCodon Function
+
+Split a DNA sequence into codons
+
+Takes a single DNA sequence and cuts it into consecutive, non-overlapping three-letter codons. The \`start\` argument sets the reading frame (1, 2 or 3), so reading can begin at any of the first three bases. Any leftover bases at the end that cannot form a full codon are dropped. The result is a character vector with one codon per element, ready for use in translation to amino acids
+
+# Function 4- translateRNA Function
+
+Translate a sequence of codons into an amino acid string
+
+Takes a character vector containing consecutive three-letter RNA codons and translates them into their corresponding amino acids. The function maps the provided sequence against the standard genetic code table stored internally within the package. The individual amino acid characters are then collapsed and pasted together without any separators. The result is a single character string representing the fully translated protein sequence, completing the simulated central dogma pipeline.
+
+# Function 5 - Amino Acid Frequency Plot
+
+Creates a bar plot showing the frequency of amino acids in a protein sequence. Takes a single protein sequence as input, identifies each unique amino acid present, and counts how many times it occurs within the sequence. These counts are organised into a data frame and visualised as a ggplot2 bar chart, where each bar represents the frequency of a particular amino acid. The function returns the completed ggplot object, allowing it to be displayed or further customised by the user.

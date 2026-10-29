@@ -1,0 +1,69 @@
+centralDogma.pdf
+================
+
+# central.dogma Package
+
+Tools for working with the central dogma of molecular biology, from DNA
+to RNA to protein. The package provides functions for splitting a DNA
+sequence into codons in a chosen reading frame, which is the first step
+in translating a coding sequence into its amino acid sequence. It also
+provides a plot of Amino Acid frequency, which makes it easy to view the
+composition of the sequnence.
+
+# Function 1- sampling function
+
+This generates a random DNA sequence. Takes a specified length and
+builds a synthetic DNA template strand by randomly sampling nucleotide
+bases (`A`, `T`, `G`, `C`) with replacement. The `seq_length` argument
+determines the total number of bases in the output. The result is a
+single character string representing a foundational genetic sequence,
+ready for use as the upstream template in downstream transcription and
+translation.
+
+# Function 2 - substituteT4U function
+
+Converts a DNA sequence into an RNA sequence
+
+The substituteT4U function takes a DNA sequence represented as a
+character string and replaces every occurrence of the nucleotide thymine
+(T) with uracil (U), producing an RNA sequence. This shows the
+difference between DNA and RNA, because RNA contains uracil instead of
+thymine. The function preserves the sequence length and the order of all
+nucleotides, leaving the other characters unchanged. The resulting RNA
+sequence can then be passed to the getCodon function to split it into
+codons for translation into amino acids.
+
+# Function 3 - getCodon Function
+
+Split a DNA sequence into codons
+
+Takes a single DNA sequence and cuts it into consecutive,
+non-overlapping three-letter codons. The \`start\` argument sets the
+reading frame (1, 2 or 3), so reading can begin at any of the first
+three bases. Any leftover bases at the end that cannot form a full codon
+are dropped. The result is a character vector with one codon per
+element, ready for use in translation to amino acids
+
+# Function 4- translateRNA Function
+
+Translate a sequence of codons into an amino acid string
+
+Takes a character vector containing consecutive three-letter RNA codons
+and translates them into their corresponding amino acids. The function
+maps the provided sequence against the standard genetic code table
+stored internally within the package. The individual amino acid
+characters are then collapsed and pasted together without any
+separators. The result is a single character string representing the
+fully translated protein sequence, completing the simulated central
+dogma pipeline.
+
+# Function 5 - Amino Acid Frequency Plot
+
+Creates a bar plot showing the frequency of amino acids in a protein
+sequence. Takes a single protein sequence as input, identifies each
+unique amino acid present, and counts how many times it occurs within
+the sequence. These counts are organised into a data frame and
+visualised as a ggplot2 bar chart, where each bar represents the
+frequency of a particular amino acid. The function returns the completed
+ggplot object, allowing it to be displayed or further customised by the
+user.

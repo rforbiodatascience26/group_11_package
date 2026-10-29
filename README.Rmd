@@ -1,25 +1,28 @@
+
 ---
-title: "central.dogma"
+title: "central.dogma library"
 output: rmarkdown::github_document
 vignette: >
-  %\VignetteIndexEntry{centralDogma}
+  %\VignetteIndexEntry{group_11_package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
+
+GitHub repository: <https://github.com/rforbiodatascience26/group_11_package>
+
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  dev = "png",
-  dev.args = list(type = "cairo")
+  comment = "#>"
 )
 ```
 
-```{r setup, include=FALSE}
+```{r setup}
 library(central.dogma)
-options(bitmapType = "cairo")
 ```
+
 
 # central.dogma Package
 

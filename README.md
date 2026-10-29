@@ -1,5 +1,12 @@
-central.dogma
+central.dogma library
 ================
+
+GitHub repository:
+<https://github.com/rforbiodatascience26/group_11_package>
+
+``` r
+library(central.dogma)
+```
 
 # central.dogma Package
 

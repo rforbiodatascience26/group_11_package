@@ -5,6 +5,8 @@ vignette: >
   %\VignetteIndexEntry{centralDogma}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+---
+
 GitHub Repository:https://github.com/rforbiodatascience26/group_11_package/)
 ---
 
